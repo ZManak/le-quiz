@@ -12,8 +12,8 @@
         <h1>WELCOME TO 50x10</h1>
     </header>
     <main>
-        <section id="formulario">
-            <form action="submit" method="post">
+        <section id="formu">
+            <form class="formulario" action="/action_page.php" onsubmit="return validateForm()" method="post">
                 
                 <article class="question">
                     <legend>1. ¿Cuál es el nombre original del protagonista de Matrix, antes de convertirse en Neo?</legend>
@@ -163,10 +163,12 @@
                   
                         <input id="perdido-field" type="radio" name="game" value="perdido">
                         <label for="perdido-field">Has perdido</label>
-                </article>
 
+                        <input id="submit" type="submit" value="Submit"><br>
+                </article>
             </form>
         </section>
+        <script src="../scripts/scripts.js"></script>
     </main>
     <footer>
         <p>2022(c) All rights reserved.</p>
