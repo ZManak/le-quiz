@@ -179,7 +179,7 @@ function pintarResultados(){
 
         if (userAnswer === lasPreguntas[i].correcta){
             alert('Correcto')
-            let labelVerde = document.querySelector("#pregunta"+[i]+"")
+            let labelVerde = document.querySelector("legend")
             labelVerde.style.color = "green";
         }
 
