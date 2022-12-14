@@ -25,7 +25,7 @@ const lasPreguntas = [
             "Thomas A. Anderson",
             "Lewis T. Chiral"
         ],
-        correcta: "Thomas A. Anderson"
+        correcta: "Thomas"
     }, 
     {
         pregunta: "2. Si te encontrases un caramelo raro, ¿en que juego estarías atrapado?", 
@@ -131,18 +131,33 @@ function pintarPreguntas(lienzo){
         let card =  `<article>
         <legend>${lasPreguntas[i].pregunta}</legend>
         
+        <label for=pregunta`+[i]+` id=pregunta`+[i]+`>${lasPreguntas[i].respuestas[0]}</label>
+        <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[0]}>
+
+        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[1]}</label>
+        <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[1]}>
+        
+        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[2]}</label>
+        <input id=${lasPreguntas[i].respuestas[2]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[2]}>
+        
+        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[3]}</label>
+        <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[3]}>
+    </article>`
+        /*let card =  `<article>
+        <legend>${lasPreguntas[i].pregunta}</legend>
+        
         <label for=${lasPreguntas[i].respuestas[0]}>${lasPreguntas[i].respuestas[0]}</label>
-        <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=${lasPreguntas[i].pregunta} value=${lasPreguntas[i].respuestas[0]}>
+        <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[0]}>
 
         <label for=${lasPreguntas[i].respuestas[1]}>${lasPreguntas[i].respuestas[1]}</label>
-        <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=${lasPreguntas[i].pregunta} value=${lasPreguntas[i].respuestas[1]}>
+        <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[1]}>
         
         <label for=${lasPreguntas[i].respuestas[2]}>${lasPreguntas[i].respuestas[2]}</label>
-        <input id=${lasPreguntas[i].respuestas[2]} type="radio" name=${lasPreguntas[i].pregunta} value=${lasPreguntas[i].respuestas[2]}>
+        <input id=${lasPreguntas[i].respuestas[2]} type="radio" nname=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[2]}>
         
         <label for=${lasPreguntas[i].respuestas[3]}>${lasPreguntas[i].respuestas[3]}</label>
-        <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=${lasPreguntas[i].pregunta} value=${lasPreguntas[i].respuestas[3]}>
-    </article>`
+        <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[3]}>
+    </article>`*/
     
         div.innerHTML = card
 
@@ -152,14 +167,22 @@ function pintarPreguntas(lienzo){
 }
 
 function pintarResultados(){
-    const respuestas = [] 
+    /*const respuestas = [] 
     for (let i = 0; i < lasPreguntas.length; i++){
-        selecciones.push(lasPreguntas[i].respuestas)
-    }
-    let userAnswer = "";
+        respuestas.push(lasPreguntas[i].respuestas)
+    }*/
+    
 
     for (let i = 0; i < lasPreguntas.length; i++) {
-        userAnswer  = (respuestas[i].querySelector(`input[name=${lasPreguntas[i].correcta}]:checked`)||{}).value
+        let userAnswer  = document.querySelector('input[name=pregunta'+[i]+']:checked').value;
+        console.log(userAnswer)
+
+        if (userAnswer === lasPreguntas[i].correcta){
+            alert('Correcto')
+            let labelVerde = document.querySelector("#pregunta"+[i]+"")
+            labelVerde.style.color = "green";
+        }
+
     }
 
 }
