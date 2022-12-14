@@ -129,7 +129,7 @@ function pintarPreguntas(lienzo){
         let div = document.createElement("div")
 
         let card =  `<article>
-        <legend>${lasPreguntas[i].pregunta}</legend>
+        <legend id=`+[i]+`>${lasPreguntas[i].pregunta}</legend>
         
         <label for=pregunta`+[i]+` id=pregunta`+[i]+`>${lasPreguntas[i].respuestas[0]}</label>
         <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[0]}>
@@ -179,8 +179,11 @@ function pintarResultados(){
 
         if (userAnswer === lasPreguntas[i].correcta){
             alert('Correcto')
-            let labelVerde = document.querySelector("legend")
-            labelVerde.style.color = "green";
+            let label = document.getElementById([i])
+            label.style.color = "green";
+        } else {
+            let label = document.querySelector([i])
+            label.style.color = "red";
         }
 
     }
