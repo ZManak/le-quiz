@@ -16,6 +16,34 @@
 
 }*/
 
+
+  /*function pintarLeQuiz (preguntas, lienzo, lienzoResults, enviar){
+    function pintarPreguntas (){
+    }
+    function pintarResultados (preguntas, lienzo, lienzoResults){
+    }
+    pintarPreguntas (preguntas, lienzo);
+    enviar.onclick = function(){
+        pintarResultados (preguntas, lienzo, lienzoResults);
+    }
+}*/
+
+/*let card =  `<article>
+        <legend id=`+i+`>${lasPreguntas[i].pregunta}</legend>
+        
+        <label for=pregunta`+i+` id=pregunta`+[i]+`>${lasPreguntas[i].respuestas[0]}</label>
+        <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+i+` value=${lasPreguntas[i].respuestas[0]}>
+        
+        <label for=pregunta`+i+`>${lasPreguntas[i].respuestas[1]}</label>
+        <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=pregunta`+i+` value=${lasPreguntas[i].respuestas[1]}>
+        
+        <label for=pregunta`+i+`>${lasPreguntas[i].respuestas[2]}</label>
+        <input id=${lasPreguntas[i].respuestas[2]} type="radio" name=pregunta`+i+` value=${lasPreguntas[i].respuestas[2]}>
+        
+        <label for=pregunta`+i+`>${lasPreguntas[i].respuestas[3]}</label>
+        <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=pregunta`+i+` value=${lasPreguntas[i].respuestas[3]}>
+    </article>`*/
+
 const lasPreguntas = [
     {
         pregunta: "1. ¿Cuál es el nombre original del protagonista de Matrix, antes de convertirse en Neo?", 
@@ -50,27 +78,27 @@ const lasPreguntas = [
     {
         pregunta: "4. ¿Qué padeces si tienes un alto contenido de midiclorianos en sangre?", 
         respuestas: [
-            "Final Fantasy",
-            "Pokemon",
-            "Fire Emblem",
-            "Mario Kart"
+            "Los designios de la fuerza",
+            "Diabetes",
+            "Trombosis",
+            "Hemofilia"
         ],
-        correcta: "Pokemon"
+        correcta: "Los"
     },
     {
-        pregunta: "5. ¿Qué padeces si tienes un alto contenido de midiclorianos en sangre?", 
+        pregunta:'5. ¿Qué parte de su marido muerto solía llevar encima Mary Shelley, autora de "Frankestein, o el moderno Prometeo"?', 
         respuestas: [
-            "Final Fantasy",
-            "Pokemon",
-            "Fire Emblem",
-            "Mario Kart"
+            "La cabeza",
+            "El pene",
+            "Los dientes",
+            "El corazón"
         ],
-        correcta: "Pokemon"
+        correcta: "El"
     }, 
     {
-        pregunta: "6. ¿Qué padeces si tienes un alto contenido de midiclorianos en sangre?", 
+        pregunta: "6. El escritor Herman Hesse mantuvo una estrecha relación con otra eminencia de su época, que influyó notablemente en su obra. Esta persona es...", 
         respuestas: [
-            "Final Fantasy",
+            "Marie Curie",
             "Pokemon",
             "Fire Emblem",
             "Mario Kart"
@@ -128,36 +156,22 @@ function pintarPreguntas(lienzo){
         
         let div = document.createElement("div")
 
-        let card =  `<article>
-        <legend id=`+[i]+`>${lasPreguntas[i].pregunta}</legend>
-        
-        <label for=pregunta`+[i]+` id=pregunta`+[i]+`>${lasPreguntas[i].respuestas[0]}</label>
-        <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[0]}>
-
-        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[1]}</label>
-        <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[1]}>
-        
-        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[2]}</label>
-        <input id=${lasPreguntas[i].respuestas[2]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[2]}>
-        
-        <label for=pregunta`+[i]+`>${lasPreguntas[i].respuestas[3]}</label>
-        <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[3]}>
-    </article>`
-        /*let card =  `<article>
-        <legend>${lasPreguntas[i].pregunta}</legend>
+               
+    let card =  `<article>
+        <legend id=`+i+`>${lasPreguntas[i].pregunta}</legend>
         
         <label for=${lasPreguntas[i].respuestas[0]}>${lasPreguntas[i].respuestas[0]}</label>
         <input id=${lasPreguntas[i].respuestas[0]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[0]}>
-
+       
         <label for=${lasPreguntas[i].respuestas[1]}>${lasPreguntas[i].respuestas[1]}</label>
         <input id=${lasPreguntas[i].respuestas[1]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[1]}>
         
         <label for=${lasPreguntas[i].respuestas[2]}>${lasPreguntas[i].respuestas[2]}</label>
-        <input id=${lasPreguntas[i].respuestas[2]} type="radio" nname=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[2]}>
+        <input id=${lasPreguntas[i].respuestas[2]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[2]}>
         
         <label for=${lasPreguntas[i].respuestas[3]}>${lasPreguntas[i].respuestas[3]}</label>
         <input id=${lasPreguntas[i].respuestas[3]} type="radio" name=pregunta`+[i]+` value=${lasPreguntas[i].respuestas[3]}>
-    </article>`*/
+    </article>`
     
         div.innerHTML = card
 
@@ -167,26 +181,21 @@ function pintarPreguntas(lienzo){
 }
 
 function pintarResultados(){
-    /*const respuestas = [] 
-    for (let i = 0; i < lasPreguntas.length; i++){
-        respuestas.push(lasPreguntas[i].respuestas)
-    }*/
     
 
     for (let i = 0; i < lasPreguntas.length; i++) {
-        let userAnswer  = document.querySelector('input[name=pregunta'+[i]+']:checked').value;
+        let userAnswer  = document.querySelector("input[name=pregunta"+i+"]:checked").value;
         console.log(userAnswer)
 
         if (userAnswer === lasPreguntas[i].correcta){
             alert('Correcto')
-            let label = document.getElementById([i])
-            label.style.color = "green";
+            let label = document.getElementById(""+i)
+            label.style.backgroundColor = "green";
         } else {
-            let label = document.querySelector([i])
-            label.style.color = "red";
+            let label = document.getElementById(""+i)
+            label.style.backgroundColor = "red";
         }
 
-    }
+    }}
 
-}
-
+    pintarPreguntas(lienzo)
