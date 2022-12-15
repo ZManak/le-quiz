@@ -1,33 +1,76 @@
-*{
+* {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+@font-face {
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RP.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
-main{
-    margin: 0px;
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0px;
+
 }
 
-body{
+body {
     margin: 0px;
     min-height: 100vh;
 }
 
-header, footer{
-    text-align: center;
-    color: antiquewhite;
-    background-color: black;
-    padding: 20px;
+.container {
+    position: relative;
+    min-height: 100vh;
 }
 
-#formulario{
+.content {
+    padding-bottom: 75px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+.landing {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.landing-text{
+    padding: 30px;
+    font-size: larger;
+}
+
+#formulario {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-fieldset{
+fieldset {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -36,20 +79,61 @@ fieldset{
 }
 
 
-legend{
+legend {
     font-weight: bold;
-    padding:10px;
+    padding: 10px;
     border-radius: 15px;
 }
 
 
-a{
+a {
+    border-radius: 15px;
+    border: 1px black solid;
     text-align: center;
+    padding: 10px;
 }
 
-button{
+button {
     justify-content: center;
     margin: 15px;
     width: 25vw;
     border-radius: 15px;
+}
+
+h1{
+    font-family: 'Irish Grover';
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+@media screen and (min-width: 480px) {
+   
+    main {
+        height: auto;
+    }
+
+    .landing-text {
+        font-size: 30px;
+        padding: 100px;
+    }
+    
+    a{
+        font-size: larger;
+    }
+
+    article{
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+   
+    .landing-text > p {
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    article{
+        width: 80vw;
+    }
 }
