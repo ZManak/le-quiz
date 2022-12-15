@@ -30,6 +30,7 @@ fieldset{
     padding: 10px;
     margin: 10px;
 }
+
 article.question{
     display: flex;
     flex-direction: column;
@@ -39,7 +40,7 @@ article.question{
 
 legend{
     font-weight: bold;
-    padding:5px;
+    padding:10px;
     border-radius: 15px;
 }
 
