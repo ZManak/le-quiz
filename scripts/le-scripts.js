@@ -194,7 +194,6 @@ function pintarResultados(){
         console.log(userAnswer)
 
         if (userAnswer === lasPreguntas[i].correcta){
-            alert('Correcto')
             let label = document.getElementById(""+i)
             label.style.backgroundColor = "green";
         } else {
@@ -205,3 +204,5 @@ function pintarResultados(){
     }}
 
     pintarPreguntas(lienzo)
+
+    document.getElementById("submit").addEventListener("click", pintarResultados)
