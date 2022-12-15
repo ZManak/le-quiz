@@ -10,6 +10,7 @@ main{
 }
 
 body{
+    margin: 0px;
     min-height: 100vh;
 }
 
@@ -17,7 +18,7 @@ header, footer{
     text-align: center;
     color: antiquewhite;
     background-color: black;
-    padding: 30px;
+    padding: 20px;
 }
 
 #formulario{
@@ -27,16 +28,13 @@ header, footer{
 }
 
 fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     padding: 10px;
     margin: 10px;
 }
 
-article.question{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-}
 
 legend{
     font-weight: bold;
@@ -44,9 +42,6 @@ legend{
     border-radius: 15px;
 }
 
-label{
-    padding-bottom: 5px;
-}
 
 a{
     text-align: center;
@@ -55,5 +50,6 @@ a{
 button{
     justify-content: center;
     margin: 15px;
-    width: 15vw;
+    width: 25vw;
+    border-radius: 15px;
 }
