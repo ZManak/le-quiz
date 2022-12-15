@@ -10,7 +10,7 @@ const lasPreguntas = [
         correcta: "Thomas"
     }, 
     {
-        pregunta: "2. Si te encontrases un caramelo raro, ¿en que juego estarías atrapado?", 
+        pregunta: "2. Si te encontrases un caramelo raro, ¿en qué juego estarías atrapado?", 
         respuestas: [
             "Final Fantasy",
             "Pokemon",
@@ -60,7 +60,7 @@ const lasPreguntas = [
         correcta: "Carl"
     }, 
     {
-        pregunta: '7. ¿Cuál es la primera película de Disney no calificada "para todos los públicos"', 
+        pregunta: '7. ¿Cuál es la primera película de Disney no calificada "para todos los públicos"?', 
         respuestas: [
             "Taron y el caldero mágico",
             "Blancanieves",
@@ -80,7 +80,7 @@ const lasPreguntas = [
         correcta: "A"
     }, 
     {
-        pregunta: "9.¿Cuántas lunas registradas tiene Júpiter", 
+        pregunta: "9.¿Cuántas lunas registradas tiene Júpiter?", 
         respuestas: [
             "79",
             "52",
@@ -90,7 +90,7 @@ const lasPreguntas = [
         correcta: "79"
     },
     {
-        pregunta: '10. ¿Qué significa? "The Game" en el contexto del propio juego?', 
+        pregunta: '10. ¿Qué significa "The Game", en el contexto del propio juego?', 
         respuestas: [
             "Tiempo muerto",
             "Falta",
