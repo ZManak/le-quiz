@@ -1,0 +1,58 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header, footer{
+    text-align: center;
+    color: antiquewhite;
+    background-color: black;
+    padding: 30px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset{
+    padding: 10px;
+    margin: 10px;
+}
+article.question{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+legend{
+    font-weight: bold;
+    padding:5px;
+    border-radius: 15px;
+}
+
+label{
+    padding-bottom: 5px;
+}
+
+a{
+    text-align: center;
+}
+
+button{
+    justify-content: center;
+    margin: 15px;
+    width: 15vw;
+}
